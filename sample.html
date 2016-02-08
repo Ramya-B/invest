@@ -1,0 +1,83 @@
+<div layout="row" layout-sm="column" layout-align="center center">
+    <div layout="column" flex="80" flex-sm="100" layout-fill>
+        <div layout="row" layout-sm="column" layout-fill>
+            <h1 class="md-display-2">Login or Create An Account</h1>
+        </div>
+         <div layout="row" layout-sm="column" layout-fill>
+        <div layout="column" flex="40" flex-sm="100">
+            <h1 class="md-headline">New Customer</h1>
+        <p ng-show="login.error" class="md-warn">{{login.error.message}}</p>
+
+        <form name="registerForm" layout="column" layout-fill layout-align="space-between" ng-submit="registerCtrl.register()">
+                     
+                     <span layout="row" layout-sm="column" flex>
+                          <md-input-container class="md-icon-float md-block" md-is-error="registerForm.userLoginId.$error.required && registerForm.userLoginId.$dirty" flex>
+                <label >Email</label>
+                <md-icon md-font-icon="zmdi zmdi-email" class="email"></md-icon>
+                <input  name="userLoginId" ng-model="registerCtrl.userInfo.userLoginId" required/>
+                <div ng-messages="loginForm.userLoginId.$error" ng-if="loginForm.userLoginId.$dirty">
+                    <div ng-message="required">Email is required</div>
+                </div>
+            </md-input-container>
+                     </span>
+                     <span layout="row" layout-sm="column" flex>
+                         <md-input-container class="md-icon-float md-block" md-is-error="registerForm.firstName.$error.required && registerForm.firstName.$dirty" flex>
+                <label >First Name</label>
+                <md-icon md-font-icon="zmdi zmdi-account" class="name"></md-icon>
+                <input  name="firstName" ng-model="registerCtrl.personalInfo.firstName" required/>
+                <div ng-messages="registerForm.firstName.$error" ng-if="registerForm.firstName.$dirty">
+                    <div ng-message="required">FirstName is required</div>
+                </div>
+            </md-input-container>
+                         <md-input-container class="md-icon-float md-block" md-is-error="registerForm.lastName.$error.required && registerForm.lastName.$dirty" flex>
+                <label >Last Name</label>
+                <input  name="lastName" ng-model="registerCtrl.personalInfo.lastName" required/>
+                <div ng-messages="registerForm.lastName.$error" ng-if="registerForm.lastName.$dirty">
+                    <div ng-message="required">LastName is required</div>
+                </div>
+            </md-input-container>
+                     </span>
+                     
+                     <span layout="row" layout-sm="column" flex>
+                          <md-input-container class="md-icon-float md-block" md-is-error="registerForm.contact.$error.required && registerForm.contact.$dirty" flex>
+                <label >Contact Number</label>
+                <md-icon md-font-icon="zmdi zmdi-phone md-icon-float md-block" class="contact"></md-icon>
+                <input  name="contact" ng-model="registerCtrl.personalInfo.contactNumber.contactNumber" required/>
+                <div ng-messages="registerForm.contact.$error" ng-if="registerForm.contact.$dirty">
+                    <div ng-message="required">Contact Number is required</div>
+                </div>
+            </md-input-container>
+                     </span>
+                     <span layout="row" layout-sm="column" flex>
+                          <md-input-container class="md-icon-float md-block" flex>
+                            <label >Company Name</label>
+                            <md-icon md-font-icon="zmdi zmdi-case" class="company"></md-icon>
+                             <input  name="lastName" ng-model="registerCtrl.companyInfo.officeSiteName" required/>
+                        </md-input-container>
+                     </span>
+                   
+                        <span layout="row" layout-align="end">
+                        <md-button class="md-primary rounded-btn" type="submit">Sign Up</md-button>
+		              </span>
+                    
+                 </form>
+        </div>
+        <div layout="column" flex="60" flex-sm="100" layout-align="end start">
+           <div layout="column" flex flex-offset-gt-md="30" class="right-panel" layout-padding layout-margin>
+               <div flex>
+                   <h1 class="md-headline">Existing Customer</h1>
+                   
+                   <md-button class="md-primary rounded-btn" ng-click="registerCtrl.signIn()">Sign In</md-button>
+               </div>
+               <div flex>
+                   <md-button class="md-primary md-raised">
+                       <md-icon md-font-icon="fa fa-comments" class="font-size-5"></md-icon>
+                       <h3 class="md-headline">Live Support</h3>
+                   </md-button>
+                   
+               </div>
+           </div>
+        </div>
+        </div>
+    </div>
+</div>
