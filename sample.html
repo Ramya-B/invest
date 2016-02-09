@@ -1,19 +1,21 @@
 <div layout="row" layout-sm="column" layout-align="center center">
     <div layout="column" flex="80" flex-sm="100" layout-fill>
-        <div layout="row" layout-sm="column" layout-fill>
+        <div layout="row" layout-	sm="column" layout-fill>
             <h1 class="md-display-2">Login or Create An Account</h1>
         </div>
          <div layout="row" layout-sm="column" layout-fill>
         <div layout="column" flex="40" flex-sm="100">
             <h1 class="md-headline">New Customer</h1>
-        <p ng-show="login.error" class="md-warn">{{login.error.message}}</p>
+        <p ng-show="login.err	or" 	class="md-warn">{{login.error.message}}</p>
 
         <form name="registerForm" layout="column" layout-fill layout-align="space-between" ng-submit="registerCtrl.register()">
                      
+					 
                      <span layout="row" layout-sm="column" flex>
                           <md-input-container class="md-icon-float md-block" md-is-error="registerForm.userLoginId.$error.required && registerForm.userLoginId.$dirty" flex>
                 <label >Email</label>
                
+			   
             </md-input-container>
                          <md-input-container class="md-icon-float md-block" md-is-error="registerForm.lastName.$error.required && registerForm.lastName.$dirty" flex>
                 <label >Last Name</label>
@@ -23,32 +25,10 @@
                 </div>
             </md-input-container>
                      </span>
-                     
-					 
-					 
-					 
-					 
-					  </div>
-            </md-input-container>
-                     </span>
-                     
-					  </div>
-            </md-input-container>
-                     </span>
-                     
-					 
-					 
-					 
-					 
-					 
-					 
-					 
-					 
-					 
-					 
+						
                      <span layout="row" layout-sm="column" flex>
                           <md-input-container class="md-icon-float md-block" md-is-error="registerForm.contact.$error.required && registerForm.contact.$dirty" flex>
-                <label >Contact Number</label>
+                <label >Contact	 Number</label>
                 <md-icon md-font-icon="zmdi zmdi-phone md-icon-float md-block" class="contact"></md-icon>
                 <input  name="contact" ng-model="registerCtrl.personalInfo.contactNumber.contactNumber" required/>
                 <div ng-messages="registerForm.contact.$error" ng-if="registerForm.contact.$dirty">
