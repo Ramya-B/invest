@@ -13,21 +13,7 @@
                      <span layout="row" layout-sm="column" flex>
                           <md-input-container class="md-icon-float md-block" md-is-error="registerForm.userLoginId.$error.required && registerForm.userLoginId.$dirty" flex>
                 <label >Email</label>
-                <md-icon md-font-icon="zmdi zmdi-email" class="email"></md-icon>
-                <input  name="userLoginId" ng-model="registerCtrl.userInfo.userLoginId" required/>
-                <div ng-messages="loginForm.userLoginId.$error" ng-if="loginForm.userLoginId.$dirty">
-                    <div ng-message="required">Email is required</div>
-                </div>
-            </md-input-container>
-                     </span>
-                     <span layout="row" layout-sm="column" flex>
-                         <md-input-container class="md-icon-float md-block" md-is-error="registerForm.firstName.$error.required && registerForm.firstName.$dirty" flex>
-                <label >First Name</label>
-                <md-icon md-font-icon="zmdi zmdi-account" class="name"></md-icon>
-                <input  name="firstName" ng-model="registerCtrl.personalInfo.firstName" required/>
-                <div ng-messages="registerForm.firstName.$error" ng-if="registerForm.firstName.$dirty">
-                    <div ng-message="required">FirstName is required</div>
-                </div>
+               
             </md-input-container>
                          <md-input-container class="md-icon-float md-block" md-is-error="registerForm.lastName.$error.required && registerForm.lastName.$dirty" flex>
                 <label >Last Name</label>
